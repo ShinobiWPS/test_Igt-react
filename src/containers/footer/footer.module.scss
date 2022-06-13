@@ -1,0 +1,28 @@
+@import '../../styles/functions';
+@import '../../styles/variables';
+
+.footerWrapper {
+  background: gray;
+  padding: toRem($default-spacing * 3) 0;
+}
+
+.linksWrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.textWrapper {
+  padding: toRem($default-spacing * 3) 0;
+  opacity: 0.9;
+  line-height: toRem($default-spacing * 3);
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .linksWrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .link {
+    padding: toRem($default-spacing * 3) 0;
+  }
+}

@@ -1,0 +1,164 @@
+@import '../../styles/functions';
+@import '../../styles/variables';
+
+$warning-button-width: 200px;
+$primary-section-mobile-height: 150px;
+
+.mainContentWrapper {
+  padding: toRem($default-spacing * 5) 0;
+}
+
+.primarySectionWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: toRem($default-spacing * 3);
+}
+
+.secondarySectionWrapper {
+  margin-top: toRem($default-spacing * 10);
+  display: flex;
+  flex-direction: column;
+}
+
+.primarySection {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: toRem($default-spacing * 2);
+}
+
+.primarySectionContent {
+  flex: 1;
+}
+
+.secondaryCardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: toRem($default-spacing * 3);
+}
+
+.secondarySectionHeader {
+  font-weight: bold;
+  margin-bottom: toRem($default-spacing) !important;
+}
+
+.secondaryCardContent {
+  padding-top: 0 !important;
+}
+
+.secondaryCardImage,
+.secondaryCardButton {
+  margin-top: toRem($default-spacing * 1.5);
+}
+
+.secondaryCardImage {
+  max-width: 100%;
+}
+
+.secondarySectionButton {
+  width: 100%;
+  padding: toRem($default-spacing * 0.5) toRem($default-spacing) !important;
+  margin-top: toRem($default-spacing) !important;
+}
+
+.primaryCardButton {
+  padding: toRem($default-spacing * 0.5) toRem($default-spacing * 8) !important;
+  margin-top: toRem($default-spacing) !important;
+}
+
+.primaryCardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.warningButtonWrapper {
+  margin-top: toRem($default-spacing * 7);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.warningButton {
+  width: $warning-button-width;
+  padding: toRem($default-spacing * 0.5) toRem($default-spacing) !important;
+}
+
+.newsletterWrapper {
+  padding: toRem($default-spacing * 3) 0;
+}
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletterHeader {
+  opacity: 0.8;
+}
+
+.newsletterButton {
+  margin-left: toRem($default-spacing) !important;
+}
+
+.mobileHidden {
+  margin: 0 toRem($default-spacing * 2);
+}
+
+.bottomNoteWrapper {
+  padding: toRem($default-spacing * 3) 0;
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .mainContentWrapper {
+    padding: 0;
+  }
+
+  .primarySectionWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .primarySection {
+    height: $primary-section-mobile-height;
+
+    &:last-child {
+      margin-top: toRem($default-spacing);
+    }
+  }
+
+  .secondarySectionWrapper {
+    margin-top: toRem($default-spacing);
+  }
+
+  .secondarySectionHeader {
+    display: none;
+  }
+
+  .secondaryCardsWrapper {
+    grid-template-columns: 1fr;
+    grid-gap: toRem($default-spacing);
+  }
+
+  .warningButtonWrapper {
+    margin: toRem($default-spacing * 2) 0;
+  }
+
+  .warningButton {
+    width: 100%;
+    padding: toRem($default-spacing * 0.5) toRem($default-spacing) !important;
+  }
+
+  .newsletter {
+    flex-direction: column;
+  }
+
+  .newsletterMobileGroup {
+    margin-top: toRem($default-spacing);
+  }
+
+  .mobileHidden {
+    display: none !important;
+  }
+}

@@ -1,0 +1,70 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+
+$logo-container-width: 150px;
+$logo-icon-size: 58px;
+
+.navigationBar {
+  box-shadow: none;
+}
+
+.container {
+  max-width: unset !important;
+  padding: 0 !important;
+}
+
+.navigationFirstLine,
+.navigationSecondLine {
+  height: 50%;
+}
+
+.navigationContent {
+  position: absolute;
+  width: $max-desktop-content-width;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logoContainer {
+  height: 100%;
+  left: 0;
+  width: $logo-container-width;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themeToggleButton {
+  position: absolute !important;
+  right: 0;
+  height: 50%;
+}
+
+.logo {
+  font-size: $logo-icon-size !important;
+}
+
+.navigationLinks {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50%;
+}
+
+.linkButton {
+  margin-left: toRem($default-spacing) !important;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mobileNavigationWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 toRem($default-spacing * 2);
+}

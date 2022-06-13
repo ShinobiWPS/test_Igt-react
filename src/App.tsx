@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useState } from 'react';
+import { apiRoute } from './api/areas/areas';
 
-function App() {
+
+import { Footer, Header, MainContent } from './modules';
+import { darkTheme, defaultTheme } from './themes';
+import { useFetch } from './useFetch';
+
+
+const themeDefault = createTheme(defaultTheme);
+const themeDark = createTheme(darkTheme);
+
+
+
+const App = () => {
+  const { data } = useFetch(apiRoute);
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={isDarkTheme ? themeDark : themeDefault}>
+      <Header
+        content={data?.headerSection}
+        onThemeToggle={() => setIsDarkTheme((isDark) => !isDark)}
+        isDarkTheme={isDarkTheme}
+      />
+      <MainContent
+        content={{
+          primarySections: data?.primarySections,
+          secondarySections: data?.secondarySections,
+        }}
+      />
+      <Footer />
+    </ThemeProvider>
   );
-}
+};
 
 export default App;

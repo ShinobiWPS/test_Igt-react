@@ -1,0 +1,14 @@
+@import '../../styles/functions';
+@import '../../styles/variables';
+
+.button {
+  display: flex;
+}
+
+.forwardButtonChildren {
+  flex: 1;
+}
+
+.forwardIcon {
+  font-size: toRem($default-spacing * 1.75) !important;
+}

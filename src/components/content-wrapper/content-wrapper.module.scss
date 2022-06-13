@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+
+.contentWrapper {
+  width: $max-desktop-content-width;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .contentWrapper {
+    width: $max-mobile-content-width;
+  }
+}

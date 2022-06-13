@@ -1,0 +1,57 @@
+@import '../../styles/variables';
+@import '../../styles/functions';
+
+$header-min-height: 350px;
+
+.headerWrapper {
+  min-height: $header-min-height;
+}
+
+.headerContentWrapper {
+  display: flex;
+  padding: toRem($default-spacing * 5) 0;
+}
+
+.carouselSection {
+  flex: 2;
+  padding-right: toRem($default-spacing * 1.5);
+}
+
+.textSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: toRem($default-spacing * 1.5);
+  padding: toRem($default-spacing / 4);
+}
+
+.textSectionContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.articleItem {
+  flex: 1;
+  padding: toRem($default-spacing / 2);
+
+  &:first-child {
+    margin-bottom: toRem($default-spacing);
+  }
+}
+
+@media screen and (max-width: $mobile-breakpoint) {
+  .headerContentWrapper {
+    flex-direction: column;
+    padding-bottom: toRem($default-spacing);
+  }
+
+  .carouselSection {
+    padding: 0;
+    margin-bottom: toRem($default-spacing);
+  }
+
+  .textSection {
+    margin: 0;
+  }
+}

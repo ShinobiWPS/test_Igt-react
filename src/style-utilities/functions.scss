@@ -1,0 +1,6 @@
+$starting-size: 16px;
+
+@function toRem($size) {
+  $remSize: $size / $starting-size;
+  @return #{$remSize}rem;
+}
