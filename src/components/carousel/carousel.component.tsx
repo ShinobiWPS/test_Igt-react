@@ -1,9 +1,9 @@
-import { Carousel as ReactResponsiveCarousel } from 'react-responsive-carousel';
 import classNames from 'classnames';
+import { Carousel as ReactResponsiveCarousel } from 'react-responsive-carousel';
 
+import { ComponentProps } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import styles from './carousel.module.scss';
-import { ComponentProps } from 'react';
 
 type CarouselProps = {
   isHidden?: boolean;

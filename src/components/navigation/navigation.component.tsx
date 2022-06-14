@@ -1,16 +1,11 @@
-import * as React from 'react';
+import { AccountBalance, Brightness2 as MoonIcon, Brightness5 as SunIcon, Menu as MenuIcon } from '@mui/icons-material/';
+import { AppBar, Box, Container, IconButton, Menu, Toolbar, Typography, useTheme } from '@mui/material';
 import classNames from 'classnames';
-import { useTheme, AppBar, Box, Toolbar, IconButton, Typography, Menu, Container } from '@mui/material';
-import {
-  Menu as MenuIcon,
-  Face as FaceIcon,
-  Brightness5 as SunIcon,
-  Brightness2 as MoonIcon,
-} from '@material-ui/icons';
+import * as React from 'react';
 
 import { Button } from '../';
-import styles from './navigation.module.scss';
 import { firstLineNavigationLinks, secondLineNavigationLinks } from './navigation.const';
+import styles from './navigation.module.scss';
 
 type NavigationProps = {
   isDarkTheme: boolean;
@@ -78,7 +73,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isDarkTheme, onThemeTogg
             }}
           >
             <Box sx={{ color: palette.secondary.contrastText }}>
-              <FaceIcon />
+              <AccountBalance />
             </Box>
           </Typography>
 
@@ -112,7 +107,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isDarkTheme, onThemeTogg
                   color: palette.secondary.contrastText,
                 }}
               >
-                <FaceIcon className={styles.logo} />
+                <AccountBalance className={styles.logo} />
               </Box>
               <Box className={styles.navigationLinks}>
                 {firstLineNavigationLinks.map((link, index) => (

@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { apiRoute } from './api/areas/areas';
 
 
-import { Footer, Header, MainContent } from './modules';
+import { Footer, Header, MainContent } from './containers';
+import { useFetch } from './hooks/useFetch';
 import { darkTheme, defaultTheme } from './themes';
-import { useFetch } from './useFetch';
 
 
 const themeDefault = createTheme(defaultTheme);

@@ -1,8 +1,8 @@
-import { Sections } from '../../models';
 import { Box, useTheme } from '@mui/material';
 import classNames from 'classnames';
+import { Sections } from '../../models';
 
-import { Button, Card, ContentWrapper, TitleSize, Text, Input, Image, Skeleton } from '../../components';
+import { Button, Card, ContentWrapper, Image, Input, Skeleton, Text, TitleSize } from '../../components';
 
 import styles from './main-content.module.scss';
 

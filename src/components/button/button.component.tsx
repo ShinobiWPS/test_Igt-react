@@ -1,7 +1,7 @@
-import { ComponentProps } from 'react';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { Button as MaterialButton, useTheme } from '@mui/material';
 import classNames from 'classnames';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import { Button as MaterialButton, ThemeOptions, useTheme } from '@mui/material';
+import { ComponentProps } from 'react';
 
 import styles from './button.module.scss';
 
